@@ -30,8 +30,5 @@
 		"typescript": "^5.0.0",
 		"vite": "^4.4.2"
 	},
-	"type": "module",
-	"dependencies": {
-		"langchain": "^0.0.139"
-	}
+	"type": "module"
 }

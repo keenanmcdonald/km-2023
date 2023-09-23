@@ -2,13 +2,19 @@
 	export let project
 </script>
 
-<a href={project.slug}>
+<a href={`/projects/${project.slug}`}>
 	<div
-		class="bg-tertiary rounded-lg shadow-md overflow-hidden cursor-pointer hover:bg-secondary transition-colors duration-200"
+		class="rounded-lg shadow-sm border-gray-600 border overflow-hidden cursor-pointer hover:bg-secondary transition-colors duration-50"
 	>
 		<div class="p-4">
+			<img
+				src={project.image}
+				alt={`a screenshot of ${project.title}`}
+				class="object-cover rounded-md mb-2 mx-auto"
+				style="height: 200px; width: 400px;"
+			/>
 			<h2 class="text-2xl font-bold mb-2">{project.title}</h2>
-			<p class="text-gray-700">{project.description}</p>
+			<p class="text-gray-400">{project.description}</p>
 		</div>
 	</div>
 </a>
