@@ -10,8 +10,7 @@
 		Feel free to check out some of my <a
 			class="text-muted hover:text-gray-200 duration-50"
 			href="/projects">recent projects</a
-		>, learn more
-		<a href="/about" class="text-muted hover:text-gray-200 duration-50">about me</a>, or get in
+		>, or get in
 		<a href="/contact" class="text-muted hover:text-gray-200 duration-50">contact</a> with me.
 	</h1>
 </div>

@@ -1,10 +1,10 @@
-import descartes from '$lib/images/descartes.png'
-import lostArt from '$lib/images/lost-art.png'
-import album from '$lib/images/album.png'
-import keenan_mcdonald from '$lib/images/keenan-mcdonald.png'
-import lang_coach from '$lib/images/lang-coach.png'
-import delay from '$lib/images/delay.png'
-import why_not_me from '$lib/images/why-not-me.png'
+import descartes from '$lib/images/descartes.jpg'
+import lostArt from '$lib/images/lost-art.jpg'
+import album from '$lib/images/album.jpg'
+import keenan_mcdonald from '$lib/images/keenan-mcdonald.jpg'
+import lang_coach from '$lib/images/lang-coach.jpg'
+import delay from '$lib/images/delay.jpg'
+import why_not_me from '$lib/images/why-not-me.jpg'
 
 const projects = [
 	{
