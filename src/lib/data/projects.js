@@ -1,23 +1,10 @@
 import descartes from '$lib/images/descartes.png'
-import lostArt from '$lib/images/lost-art.png'
+import lostArt from '$lib/images/lost-art-2.png'
 import album from '$lib/images/album.png'
-import keenan_mcdonald from '$lib/images/keenan-mcdonald.png'
-import lang_coach from '$lib/images/lang-coach.png'
 import delay from '$lib/images/delay.png'
 import why_not_me from '$lib/images/why-not-me.png'
 
 const projects = [
-	{
-		title: 'lang coach',
-		description: 'a language learning app',
-		slug: 'lang-coach',
-		link: 'https://lang-coach.vercel.app/',
-		image: lang_coach,
-		fullDescription: [
-			'This is a language-learning tool that I originally built for my partner. She had wanted an AI chatbot that she could converse with that would also correct her mistakes. Its meant to create an experience similar to working with a language tutor, but is something that could be used daily at any time.',
-			"I built it in a single afternoon using svelte and Open AI's api. Someday I'd like to add more features to it,  and potentially replace the language model with something I can host myself."
-		]
-	},
 	{
 		title: 'descartes',
 		description: 'a sequencer implementation for norns',
@@ -25,10 +12,10 @@ const projects = [
 		link: 'https://llllllll.co/t/descartes/58413',
 		image: descartes,
 		fullDescription: [
-			"This is a sequencer that I build for monome's norns platform. Norns is a small computer that's designed for making music. Under the hood, it uses the SuperCollider audio engine. Scripts are written in lua. Norns can be connected to a midi controller and can be used with various other hardware developed by monome. This script uses the monome grid as a controller and can be connected with crow, which is a eurorack module that can talk to norns.",
-			'While I had made several other scripts for norns prior to descartes, this is the first one that I made public. All of my previous work on the platform was more experimental, half-finished, or for hyper-specific, personal applications. I was very inspired by the response on the lines forum and have appreciated all of the feedback from the community.',
-			"In terms of design, the script is just an implementation of Make Noise's Rene v2 eurorack module. I've been using Rene for years and have always loved the design. When I sold my Rene a few years ago to make more room in my case, I missed it enough that I set out to build the script in order to be able to use the sequencer's functionality without having to set aside the room in my case. (I've since purchased the Rene again, and sold it, and purchased it again.)",
-			"I haven't yet implemented every feature in Rene v2 in the script but the fundamentals are there. I think the biggest advantage of the script over the module is that it can be used with any midi device. While I don't personally use midi much in my own workflow, it seems like that is what others have responded too most. The majority of the folks in the lines thread that ask questions or ask for new features seem to be using it to sequence midi devices the Rene module wouldn't be able to talk to."
+			"A sequencer that I built for monome's norns platform. Norns is a small open-source sound computer. Under the hood, it uses the SuperCollider audio engine. Scripts are written in lua. Norns can be connected to a midi controller and can be used with various other hardware developed by monome. This script uses the monome grid as a controller and can be connected with crow, which is a eurorack module that can talk to norns.",
+			'While I had made several other scripts for norns prior to descartes, this is the first one that I made public. All of my previous work on the platform was more experimental, half-finished, or for hyper-specific, personal applications. I was very inspired by the response from the community and have appreciated all of the feedback.',
+			"The script an implementation of the Rene v2 eurorack module from Make Noise. I've been using Rene for years and have always loved the design. When I sold my Rene a few years ago to make more room in my case, I missed it enough that I set out to build the script in order to be able to use the sequencer's functionality without having to set aside the room in my case. (I've since purchased the Rene again, and sold it, and purchased it again.)",
+			"I haven't yet implemented every feature of Rene v2 in the script but the fundamentals are there. I think the biggest advantage of the script over the module is that it can be used with any midi device. While I don't personally use midi much in my own workflow, it seems like that is what others have responded to most. The majority of the folks in the lines thread that ask questions or ask for new features seem to be using it to sequence midi devices the Rene module wouldn't be able to talk to."
 		]
 	},
 	{
@@ -37,7 +24,7 @@ const projects = [
 		slug: 'timeshift-delay',
 		image: delay,
 		fullDescription: [
-			'This is a digital audio effect that I built in Max/MSP. The design is something I had been thinking about for a while and I finally decided to sit down and build it. When I was in college, I created an album of sample-based music - it was something akin to vaporwave in terms of genre. One of the techinques that I used on the album to manipulate samples was to import a sample into my DAW, and play the sample back at different speeds (timestretched to preserve pitch) that were related to the original tempo of the sample. This would create a polyrhythmic effect that I really liked. I wanted to create a digital audio effect that would allow me to do this in real time.',
+			'A digital audio effect that I built in Max/MSP. The design is something I had been thinking about for a while and I finally decided to sit down and build. When I was in college, I created an album of sample-based music - musically, it was something akin to vaporwave. One of the techinques that I used on the album to manipulate samples was to import a sample into my DAW, and play the sample back at different speeds simultaneously (timestretched to preserve pitch). This would create a polyrhythmic effect that I really liked. I wanted to create a digital audio effect that would allow me to do this in real time.',
 			'The user can set the length of the buffer using a sort of tap-tempo-like function. The wet signal is a timestretched playback of the buffer. Speed of the wet signal is always set as a ratio of the original sample. The user can set the numerator and denominator of the ratio to numbers between 1 and 16. So the playback can be between 1/16 the speed to 16x the speed of the original. There are two "delay" lines which can each have their own timestretch ratio and can be adjusted in volume.',
 			'Techincally, the patch uses a digital signal processing algorithm called a phase vocoder which takes a slice of a digital audio signal (that is, a discrete set of samples arranged by time) and converts them to a set of sine wave frequencies and amplitudes. The phase vocoder allows for the manipulation of speed and pitch independent of each other and is the basis of most modern time-stretch and pitch-shifting techniques in digital audio. The patch just takes the phase vocoder and uses it in conjunction with a live audio buffer in order to create the pitch-shifting effect in real time.',
 			"I was really happy with the results here. The effect captures something that I really appreciate in electronic instrument design in that it does something simple and fundamental, divorced from any specific application, and yet it can be used to create a wide variety of sounds - whether it's slowing down an incoming signal to extremes to create artifacts, used with drum loops to create interesting polyrhythms, or used as a sort of off-kilter delay.",
@@ -77,17 +64,6 @@ const projects = [
 		image: why_not_me,
 		fullDescription: [
 			"This was a website I made for a friend when I had just started out to help sell his father's book. It's made with just HTML, CSS, and JS. No framework. I wanted to make something very simple, yet beautiful, that captured the aesthetic of the book's jacket. I was happy with the result. The live site isn't up anymore but I still have a version deployed on github pages."
-		]
-	},
-	{
-		title: 'keenanmcdonald.com',
-		description: 'my personal website',
-		slug: 'website',
-		link: 'https://keenanmcdonald.com',
-		image: keenan_mcdonald,
-		fullDescription: [
-			"The site you're on right now! I built this to replace my previous portfolio site which was full of distracting, showy css and js styling tricks and existed mostly to show off boot camp projects that are no longer deployed and that I'd rather not highlight.",
-			"I'd like for this site to be a sort of playground where I can experiment with new ideas and try out new technologies. I built it in svelte with sveltekit, which is unfamiliar to me but I've enjoyed learning."
 		]
 	}
 ]
